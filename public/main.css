@@ -1,0 +1,102 @@
+html {
+    font-size: 2em;
+    text-align: center;
+}
+
+.login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-element h3 {
+    margin-top: 15%;
+}
+
+.login-element.name input {
+    margin-top: 25%;
+    font-size: 1.5em;
+    height: 100px;
+    width: 300px;
+}
+
+.login button {
+    margin-top: 100%;
+    font-size: 20px;
+    padding: 30px 50px;
+    background-color: rgba(0, 195, 255, 0.589);
+}
+
+.login .sex {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .sex label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login .sex input {
+    width: 100px;
+    height: 50px;
+}
+
+.player {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player h1 {    
+    color: white;
+    -webkit-text-stroke: 3px black;
+    margin-bottom: 0px;
+}
+
+.player .sex {
+    font-size: 24px;
+    margin-top: 0px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.stat button {
+    padding: 15px;
+}
+
+@media (min-width: 360px) {
+    .stat button {
+        padding: 35px;
+    }
+}
+
+
+.stat_value {
+    padding: 10px;
+}
+
+.stat button {
+    font-size: 20px;
+}
+
+.left_button button {
+    background-color: rgb(255, 53, 18);
+}
+
+.right_button button {
+    background-color: rgb(0, 255, 115);
+}
