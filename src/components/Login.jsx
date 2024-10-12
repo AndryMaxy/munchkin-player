@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Api from '../web/api';
 import Sex from '../sex';
 
@@ -7,7 +7,7 @@ const Login = () => {
     const input = useRef('');
     const maleSex = useRef('');
     const femaleSex = useRef('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const submit = async (e) => {
         e.preventDefault();
@@ -16,7 +16,7 @@ const Login = () => {
         if (name.length < 2) return;
 
         await Api.create(name, sex);
-        history.push(`/player/${name}`);
+        navigate(`/player/${name}`);
     };
 
     const oncNameCange = (e) => {

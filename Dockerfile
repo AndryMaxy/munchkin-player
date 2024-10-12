@@ -1,6 +1,4 @@
-# syntax=docker/dockerfile:1
-
-FROM node:16.8.0 as build
+FROM node:20 as build
 
 WORKDIR /app
 
@@ -20,6 +18,6 @@ FROM nginx
 
 COPY --from=build /app/build /usr/share/nginx/html
 
-EXPOSE 6000
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]

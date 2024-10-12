@@ -7,9 +7,12 @@ const Player = () => {
     const [player, setPlayer] = useState({});
     const params = useParams();
 
-    useEffect(async () => {
-        const player = await Api.get(params.name);
-        setPlayer(player);
+    useEffect(() => {
+        async function fetchPlayer() {
+            const player = await Api.get(params.name);
+            setPlayer(player);
+        }
+        fetchPlayer();
     }, []);
 
     const update = async (updatedPlayer) => {
